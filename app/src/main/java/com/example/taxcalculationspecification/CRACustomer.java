@@ -3,8 +3,13 @@ package com.example.taxcalculationspecification;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -12,10 +17,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import static java.security.AccessController.getContext;
+
 public class CRACustomer extends AppCompatActivity {
 
     private TextView DateTxt;
     private TextView Age;
+    private TextView currentDate;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +35,20 @@ public class CRACustomer extends AppCompatActivity {
 
         DateTxt = findViewById(R.id.BirthDate);
         Age = findViewById(R.id.Age);
+        currentDate = findViewById(R.id.CurrentDate);
+
+
+
 
 
         final Calendar myCalendar = Calendar.getInstance();
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        currentDate.setText( "Tax Filing Date: "+sdf.format(myCalendar.getTime()));
+        currentDate.setTextColor(Color.BLACK);
+        currentDate.setTypeface(null,Typeface.BOLD);
+
 
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -42,7 +64,23 @@ public class CRACustomer extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 DateTxt.setText("Date of Birth: "+sdf.format(myCalendar.getTime()));
-                Age.setText("Age: "+Integer.toString(calculateAge(myCalendar.getTimeInMillis())));
+                DateTxt.setTextColor(Color.BLACK);
+
+                if(calculateAge(myCalendar.getTimeInMillis()) > 18 )
+                {
+                    Age.setText("Age: " + Integer.toString(calculateAge(myCalendar.getTimeInMillis())));
+                    Age.setTextColor(Color.BLACK);
+                    Age.setTypeface(null,Typeface.NORMAL);
+
+
+                }else {
+                    Age.setText(" Not eligible to file tax for current year!");
+                    Age.setTextColor(Color.RED);
+                    Age.setTypeface(null, Typeface.BOLD);
+
+
+                }
+
 
             }
 
@@ -72,6 +110,8 @@ public class CRACustomer extends AppCompatActivity {
         }
         return age;
     }
+
+
 
 
 

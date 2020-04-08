@@ -79,6 +79,31 @@
                             android:textAlignment="center">
 
                         </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout7"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/Sin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Sin Number"
+                                android:textAlignment="center">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
 
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -167,26 +192,27 @@
                     tools:layout_editor_absoluteY="80dp">
 
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/Age"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="Age"
-                        android:textAlignment="center">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Age"
+                            android:textAlignment="center">
 
-                    </com.google.android.material.textview.MaterialTextView>
+                        </com.google.android.material.textview.MaterialTextView>
 
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout6"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
+                        android:layout_width="400dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         tools:layout_editor_absoluteX="104dp"
@@ -201,7 +227,9 @@
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:hint="GENDER"
-                            android:textAlignment="viewStart">
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:textSize="18sp">
 
                         </com.google.android.material.textview.MaterialTextView>
 
@@ -213,32 +241,6 @@
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
                             android:entries="@array/gender" />
-
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout7"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
-
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/Sin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Sin Number"
-                            android:textAlignment="center">
-
-                        </com.google.android.material.textfield.TextInputEditText>
 
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -307,6 +309,10 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:text="Clear" />
+
+
+                   
+
 
 
 
