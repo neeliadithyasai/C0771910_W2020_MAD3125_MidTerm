@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class informationEntryScreen extends AppCompatActivity {
     private TextView Age;
     private TextView currentDate;
     private TextView sinNO;
+    private Button submit;
 
 
 
@@ -36,6 +38,7 @@ public class informationEntryScreen extends AppCompatActivity {
         Age = findViewById(R.id.Age);
         currentDate = findViewById(R.id.CurrentDate);
         sinNO = findViewById(R.id.Sin);
+        submit = findViewById(R.id.btnSubmit);
 
 
 
@@ -101,10 +104,27 @@ public class informationEntryScreen extends AppCompatActivity {
 
 
 
-        sinNO.setOnClickListener(new View.OnClickListener() {
+//        sinNO.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                String strSin = sinNO.getText().toString();
+//
+//                if((isValidSin(strSin)) == true){
+//                    sinNO.setText(strSin);
+//                }else
+//                {
+//                    sinNO.setError("not valid");
+//                }
+//
+//
+//
+//            }
+//        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String strSin = sinNO.getText().toString();
 
                 if((isValidSin(strSin)) == true){
@@ -113,7 +133,6 @@ public class informationEntryScreen extends AppCompatActivity {
                 {
                     sinNO.setError("not valid");
                 }
-
 
 
             }
@@ -132,7 +151,9 @@ public class informationEntryScreen extends AppCompatActivity {
         return age;
     }
     private boolean isValidSin(String sin) {
-        String sinValidation = "\\(\\d{3}\\)-\\d{3}-\\d{4}";
+        String sinValidation = "\\d{9}";
+//
+//        \(\d{3}\)-\d{3}-
 
         Pattern pattern = Pattern.compile(sinValidation);
         Matcher matcher = pattern.matcher(sin);

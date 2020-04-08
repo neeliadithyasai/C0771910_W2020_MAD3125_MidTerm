@@ -172,8 +172,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="Enter Birth Date"
-                            android:textAlignment="center">
+                            android:hint="Click to Enter Birth Date"
+                            android:textAlignment="center"
+                            android:textColor="@color/design_default_color_on_secondary">
 
                         </com.google.android.material.textview.MaterialTextView>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -198,7 +199,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="Age"
-                            android:textAlignment="center">
+                            android:textAlignment="center"
+                            android:textColor="@color/design_default_color_on_secondary">
 
                         </com.google.android.material.textview.MaterialTextView>
 
@@ -227,7 +229,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/Gender"
-                                android:layout_width="184dp"
+                                android:layout_width="91dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="left"
                                 android:layout_marginLeft="5dp"
