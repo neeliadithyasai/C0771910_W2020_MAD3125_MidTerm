@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TaxCalculationSpecification</string>
+    <string-array name="gender">
+        <item>Choose One Type</item>
+        <item>MALE</item>
+        <item>FEMALE</item>
+        <item>OTHER</item>
+    </string-array>
 </resources>

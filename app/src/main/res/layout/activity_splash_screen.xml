@@ -12,5 +12,16 @@
         android:layout_width="348dp"
         android:layout_height="343dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/bnparkadnrockymountains" />
+        android:background="@color/cardview_light_background"
+        app:srcCompat="@drawable/tax2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Tax Calculation"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp" />
 </LinearLayout>
