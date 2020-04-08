@@ -12,11 +12,10 @@ public class CRACustomer implements Parcelable  {
     private String Birthdate;
     private String age;
     private String Gender;
-    private Float GrossIncome;
-    private Float RRSP;
+    private Double GrossIncome;
+    private Double RRSP;
 
-
-    public CRACustomer(Parcel in) {
+    protected CRACustomer(Parcel in) {
         sinNo = in.readString();
         firstName = in.readString();
         lastName = in.readString();
@@ -26,55 +25,13 @@ public class CRACustomer implements Parcelable  {
         if (in.readByte() == 0) {
             GrossIncome = null;
         } else {
-            GrossIncome = in.readFloat();
+            GrossIncome = in.readDouble();
         }
         if (in.readByte() == 0) {
             RRSP = null;
         } else {
-            RRSP = in.readFloat();
+            RRSP = in.readDouble();
         }
-    }
-
-    public CRACustomer() {
-    }
-
-    public CRACustomer(String sinNo, String firstName, String lastName, String birthdate, String age, String gender, Float grossIncome, Float RRSP) {
-        this.sinNo = sinNo;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        Birthdate = birthdate;
-        this.age = age;
-        Gender = gender;
-        GrossIncome = grossIncome;
-        this.RRSP = RRSP;
-    }
-
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(sinNo);
-        dest.writeString(firstName);
-        dest.writeString(lastName);
-        dest.writeString(Birthdate);
-        dest.writeString(age);
-        dest.writeString(Gender);
-        if (GrossIncome == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeFloat(GrossIncome);
-        }
-        if (RRSP == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeFloat(RRSP);
-        }
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
     }
 
     public static final Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
@@ -88,6 +45,47 @@ public class CRACustomer implements Parcelable  {
             return new CRACustomer[size];
         }
     };
+
+    public CRACustomer() {
+    }
+
+    public CRACustomer(String sinNo, String firstName, String lastName, String birthdate, String age, String gender, Double grossIncome, Double RRSP) {
+        this.sinNo = sinNo;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        Birthdate = birthdate;
+        this.age = age;
+        Gender = gender;
+        GrossIncome = grossIncome;
+        this.RRSP = RRSP;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sinNo);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(Birthdate);
+        dest.writeString(age);
+        dest.writeString(Gender);
+        if (GrossIncome == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(GrossIncome);
+        }
+        if (RRSP == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(RRSP);
+        }
+    }
 
     public String getSinNo() {
         return sinNo;
@@ -137,19 +135,19 @@ public class CRACustomer implements Parcelable  {
         Gender = gender;
     }
 
-    public Float getGrossIncome() {
+    public Double getGrossIncome() {
         return GrossIncome;
     }
 
-    public void setGrossIncome(Float grossIncome) {
+    public void setGrossIncome(Double grossIncome) {
         GrossIncome = grossIncome;
     }
 
-    public Float getRRSP() {
+    public Double getRRSP() {
         return RRSP;
     }
 
-    public void setRRSP(Float RRSP) {
+    public void setRRSP(Double RRSP) {
         this.RRSP = RRSP;
     }
 
