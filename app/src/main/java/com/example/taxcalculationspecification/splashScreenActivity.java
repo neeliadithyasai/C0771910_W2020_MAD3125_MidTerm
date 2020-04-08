@@ -26,7 +26,7 @@ public class splashScreenActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     Intent i=new Intent(splashScreenActivity.this,
-                            CRACustomer.class);
+                            informationEntryScreen.class);
 
                     startActivity(i);
 
