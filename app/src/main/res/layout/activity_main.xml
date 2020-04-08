@@ -142,14 +142,15 @@
                         tools:layout_editor_absoluteY="80dp">
 
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/BirthDate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="dd/mm/yyyy">
+                            android:hint="Enter Birth Date"
+                            android:textAlignment="center">
 
-                        </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textview.MaterialTextView>
                     </com.google.android.material.textfield.TextInputLayout>
 
 
