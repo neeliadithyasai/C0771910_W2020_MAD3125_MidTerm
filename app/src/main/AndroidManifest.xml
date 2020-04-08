@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
-        <activity android:name=".informationEntryScreen"></activity>
-        <activity android:name=".splashScreenActivity"
+        <activity android:name=".Ui.informationEntryScreen"></activity>
+        <activity android:name=".Ui.splashScreenActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

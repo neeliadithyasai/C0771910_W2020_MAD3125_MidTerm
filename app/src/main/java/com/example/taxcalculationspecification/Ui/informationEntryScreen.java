@@ -1,8 +1,9 @@
-package com.example.taxcalculationspecification;
+package com.example.taxcalculationspecification.Ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -11,7 +12,11 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import com.example.taxcalculationspecification.CRACustomer;
+import com.example.taxcalculationspecification.R;
+
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -25,6 +30,7 @@ public class informationEntryScreen extends AppCompatActivity {
     private TextView currentDate;
     private TextView sinNO;
     private Button submit;
+
 
 
 
@@ -71,16 +77,19 @@ public class informationEntryScreen extends AppCompatActivity {
 
                 if(calculateAge(myCalendar.getTimeInMillis()) > 18 )
                 {
+
                     Age.setText("Age: " + Integer.toString(calculateAge(myCalendar.getTimeInMillis())));
                     Age.setTextColor(Color.BLACK);
                     Age.setTypeface(null,Typeface.NORMAL);
+                    submit.setEnabled(true);
 
 
                 }else {
+
                     Age.setText(" Not eligible to file tax for current year!");
                     Age.setTextColor(Color.RED);
                     Age.setTypeface(null, Typeface.BOLD);
-
+                    submit.setEnabled(false);
 
                 }
 
@@ -104,34 +113,31 @@ public class informationEntryScreen extends AppCompatActivity {
 
 
 
-//        sinNO.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                String strSin = sinNO.getText().toString();
-//
-//                if((isValidSin(strSin)) == true){
-//                    sinNO.setText(strSin);
-//                }else
-//                {
-//                    sinNO.setError("not valid");
-//                }
-//
-//
-//
-//            }
-//        });
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String strSin = sinNO.getText().toString();
 
-                if((isValidSin(strSin)) == true){
-                    sinNO.setText(strSin);
+                if((isValidSin(strSin)) == false){
+                    sinNO.setError("not valid");
+
                 }else
                 {
-                    sinNO.setError("not valid");
+                    sinNO.setText(strSin);
+
+
+                    Intent mIntent = new Intent(informationEntryScreen.this, displayActivity.class);
+
+
+                    CRACustomer C1 = new CRACustomer("9999999999","Adithya", "Neeli", "12/9/95", "25", "male", 500.0, 34.0);
+
+
+                    mIntent.putExtra("object",C1);
+                    startActivity(mIntent);
+
+
                 }
 
 
