@@ -60,23 +60,23 @@ public class detailsDisplay extends AppCompatActivity {
         Double contributedRrsp = C2.getRRSP();
         Double TotalTaxableIncome = (gross-(calcualtecpp(gross)+calculateEi(gross)+calculateMaxRrsp(gross)));
 
-        
+
 
        cpp.setText(String.format("%.2f", calcualtecpp(gross)));
-       eI.setText(calculateEi(gross).toString());
+       eI.setText(String.format("%.2f",calculateEi(gross)));
 
        if(calculateMaxRrsp(gross) > contributedRrsp)
        {
           Double x = calculateMaxRrsp(gross) - contributedRrsp;
-          cfrrsp.setText(x.toString());
-          rrsp.setText(contributedRrsp.toString());
+          cfrrsp.setText(String.format("%.2f",x));
+          rrsp.setText(String.format("%.2f",contributedRrsp));
 
        }else if(calculateMaxRrsp(gross) < contributedRrsp)
        {
            Double x = calculateMaxRrsp(gross) - contributedRrsp;
-           cfrrsp.setText(x.toString());
+           cfrrsp.setText(String.format("%.2f",x));
            cfrrsp.setTextColor(Color.RED);
-           rrsp.setText(contributedRrsp.toString());
+           rrsp.setText(String.format("%.2f",contributedRrsp));
 
        }
 
