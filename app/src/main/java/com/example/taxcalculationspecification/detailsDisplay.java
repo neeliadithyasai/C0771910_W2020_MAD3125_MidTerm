@@ -23,6 +23,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView Age;
     private TextView TaxFilingDate;
     private TextView grossIncome;
+    private TextView gender;
 
 
     @Override
@@ -44,6 +45,7 @@ public class detailsDisplay extends AppCompatActivity {
        Age = findViewById(R.id.ageofp);
        TaxFilingDate = findViewById(R.id.taxfilingDate);
        grossIncome = findViewById(R.id.grosssIncomep);
+       gender = findViewById(R.id.genderp);
 
 
 
@@ -130,6 +132,7 @@ public class detailsDisplay extends AppCompatActivity {
         sinNumber.setText(C2.getSinNo());
         fullName.setText(C2.getLastName().toUpperCase()+" "+C2.getFirstName());
         BirthDate.setText(C2.getBirthdate());
+        gender.setText(C2.getGender());
         Age.setText(C2.getAge());
         TaxFilingDate.setText(C2.getCurrentDate());
         grossIncome.setText(C2.getGrossIncome().toString());
