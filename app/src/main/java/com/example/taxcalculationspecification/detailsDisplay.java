@@ -60,6 +60,21 @@ public class detailsDisplay extends AppCompatActivity {
         return x;
 
     }
-   
+    private Double calculateEi(Double gross){
+        Double x;
+
+        if(gross >= 53100){
+
+            x = 860.22;
+
+        }else{
+
+            x = gross *0.0162;
+
+        }
+
+        return x;
+    }
+
 
 }
