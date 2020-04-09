@@ -38,6 +38,7 @@
         private TextView grossIncome;
         private TextView rrsp;
         private Button submit;
+        private Button clear;
 
 
 
@@ -60,6 +61,7 @@
             grossIncome = findViewById(R.id.Grossincome);
             rrsp = findViewById(R.id.RRsp);
             submit = findViewById(R.id.btnSubmit);
+            clear = findViewById(R.id.btnClear);
 
 
 
@@ -171,6 +173,27 @@
 
                 }
             });
+
+
+            clear.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    firstname.setText("");
+                    lastName.setText("");
+                    sinNO.setText("");
+                    DateTxt.setText("");
+                    grossIncome.setText("");
+                    rrsp.setText("");
+                    Age.setText("Age");
+
+
+
+
+
+                }
+            });
+
 
         }
 
