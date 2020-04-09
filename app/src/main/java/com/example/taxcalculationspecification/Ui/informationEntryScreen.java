@@ -71,7 +71,7 @@
             String myFormat = "MM/dd/yy"; //In which you need put here
             SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-            currentDate.setText( "Tax Filing Date: "+sdf.format(myCalendar.getTime()));
+            currentDate.setText(sdf.format(myCalendar.getTime()));
             currentDate.setTextColor(Color.BLACK);
             currentDate.setTypeface(null,Typeface.BOLD);
 
@@ -89,13 +89,13 @@
                     String myFormat = "MM/dd/yy"; //In which you need put here
                     SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-                    DateTxt.setText("Date of Birth: "+sdf.format(myCalendar.getTime()));
+                    DateTxt.setText(sdf.format(myCalendar.getTime()));
                     DateTxt.setTextColor(Color.BLACK);
 
                     if(calculateAge(myCalendar.getTimeInMillis()) > 18 )
                     {
 
-                        Age.setText("Age: " + Integer.toString(calculateAge(myCalendar.getTimeInMillis())));
+                        Age.setText( Integer.toString(calculateAge(myCalendar.getTimeInMillis())));
                         Age.setTextColor(Color.BLACK);
                         Age.setTypeface(null,Typeface.NORMAL);
                         submit.setEnabled(true);
