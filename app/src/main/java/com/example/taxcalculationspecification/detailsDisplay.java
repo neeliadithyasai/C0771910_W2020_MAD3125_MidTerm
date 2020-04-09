@@ -18,6 +18,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView federal;
     private TextView totalTaxPaid;
     private TextView sinNumber;
+    private TextView fullName;
 
 
     @Override
@@ -34,6 +35,8 @@ public class detailsDisplay extends AppCompatActivity {
        federal = findViewById(R.id.federalTax);
        totalTaxPaid = findViewById(R.id.ttpp);
        sinNumber = findViewById(R.id.sinNo);
+       fullName = findViewById(R.id.fullName);
+
 
 
         Intent intent = getIntent();
@@ -116,6 +119,7 @@ public class detailsDisplay extends AppCompatActivity {
         totalTaxPaid.setText(x.toString());
 
         sinNumber.setText(C2.getSinNo());
+        fullName.setText(C2.getLastName().toUpperCase()+" "+C2.getFirstName());
 
 
 
