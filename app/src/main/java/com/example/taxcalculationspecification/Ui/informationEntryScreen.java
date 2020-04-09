@@ -148,23 +148,26 @@
                     }else if (lastName.getText().toString().matches("")){
                         lastName.setError("enter Last name!");
 
-                    }else if (grossIncome.getText().toString().matches("")){
-                        grossIncome.setError("enter Last name!");
+                    }else if ( Double.parseDouble(grossIncome.getText().toString()) <= 0){
+                        grossIncome.setError("gross income cannot be Zero");
 
-                    }else if (rrsp.getText().toString().matches("")){
+                    } else if (grossIncome.getText().toString().matches("")) {
+
+                        grossIncome.setError("enter gross income!");
+
+                    } else if (rrsp.getText().toString().matches("")) {
                         rrsp.setError("enter Last name!");
 
-                    }else
-                    {
+                    } else {
                         sinNO.setText(sinNO.getText().toString());
-                        String value1= grossIncome.getText().toString();
-                        Double grossValue=Double.parseDouble(value1);
-                        String value2= rrsp.getText().toString();
-                        Double rrspValue=Double.parseDouble(value2);
+                        String value1 = grossIncome.getText().toString();
+                        Double grossValue = Double.parseDouble(value1);
+                        String value2 = rrsp.getText().toString();
+                        Double rrspValue = Double.parseDouble(value2);
 
                         Intent mIntent = new Intent(informationEntryScreen.this, detailsDisplay.class);
-                        CRACustomer C1 = new CRACustomer(currentDate.getText().toString(),sinNO.getText().toString(),firstname.getText().toString(), lastName.getText().toString(), DateTxt.getText().toString(), Age.getText().toString(), gender.getSelectedItem().toString(), grossValue, rrspValue);
-                        mIntent.putExtra("object",C1);
+                        CRACustomer C1 = new CRACustomer(currentDate.getText().toString(), sinNO.getText().toString(), firstname.getText().toString(), lastName.getText().toString(), DateTxt.getText().toString(), Age.getText().toString(), gender.getSelectedItem().toString(), grossValue, rrspValue);
+                        mIntent.putExtra("object", C1);
                         startActivity(mIntent);
 
 
