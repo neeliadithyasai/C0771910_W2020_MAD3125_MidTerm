@@ -18,6 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/design_default_color_secondary"
             android:orientation="vertical">
 
             <ScrollView
@@ -28,13 +29,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout11"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         tools:layout_editor_absoluteX="104dp"
@@ -57,100 +59,98 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout12"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
+                        android:orientation="horizontal">
 
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/displayDate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Tax Filing Date"
-                            android:text="Tax Filing Date:"
-                            android:textAlignment="center"
-                            android:textColor="@color/design_default_color_on_secondary">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout8"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
-
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/CurrentDate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Current Date"
-                            android:textAlignment="center">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textInputLayout7"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout12"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
                             android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            app:endIconMode="clear_text"
-                            app:counterEnabled="true"
-                            app:counterMaxLength="9"
                             tools:layout_editor_absoluteX="104dp"
                             tools:layout_editor_absoluteY="80dp">
 
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/Sin"
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/displayDate"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:inputType="numberDecimal"
-                                android:hint="Sin Number"
-                                android:textAlignment="center">
+                                android:hint="Tax Filing Date"
+                                android:text="Tax Filing Date:"
+                                android:textAlignment="center"
+                                android:textColor="@color/design_default_color_on_secondary">
 
-                            </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textview.MaterialTextView>
 
 
                         </com.google.android.material.textfield.TextInputLayout>
 
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout8"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/CurrentDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Current Date"
+                                android:textAlignment="center">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout7"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="9"
+                        app:endIconMode="clear_text"
+                        tools:layout_editor_absoluteX="104dp"
+                        tools:layout_editor_absoluteY="80dp">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Sin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Sin Number"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -158,8 +158,8 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         app:endIconMode="clear_text"
@@ -182,8 +182,8 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         app:endIconMode="clear_text"
@@ -203,126 +203,125 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout13"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
+                        android:orientation="horizontal">
 
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/bdate"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout13"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:text="Date Of Birth:"
-                            android:textAlignment="center"
-                            android:textColor="@color/design_default_color_on_secondary">
-
-                        </com.google.android.material.textview.MaterialTextView>
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
 
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/bdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Date Of Birth:"
+                                android:textAlignment="center"
+                                android:textColor="@color/design_default_color_on_secondary">
+
+                            </com.google.android.material.textview.MaterialTextView>
 
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout4"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout4"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/BirthDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Click to Enter Birth Date"
+                                android:textAlignment="center"
+                                android:textColor="@color/design_default_color_on_secondary">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
+                        android:orientation="horizontal">
 
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/BirthDate"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout15"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:hint="Click to Enter Birth Date"
-                            android:textAlignment="center"
-                            android:textColor="@color/design_default_color_on_secondary">
-
-                        </com.google.android.material.textview.MaterialTextView>
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout15"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        tools:layout_editor_absoluteX="104dp"
-                        tools:layout_editor_absoluteY="80dp">
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
 
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/Agelbl"
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/Agelbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Age:"
+                                android:textAlignment="center"
+                                android:textColor="@color/design_default_color_on_secondary">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout5"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:text="Age:"
-                            android:textAlignment="center"
-                            android:textColor="@color/design_default_color_on_secondary">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                    </com.google.android.material.textfield.TextInputLayout>
+                            tools:layout_editor_absoluteX="104dp"
+                            tools:layout_editor_absoluteY="80dp">
 
 
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/Age"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Age"
+                                android:textAlignment="center"
+                                android:textColor="@color/design_default_color_on_secondary">
 
+                            </com.google.android.material.textview.MaterialTextView>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    tools:layout_editor_absoluteX="104dp"
-                    tools:layout_editor_absoluteY="80dp">
+                        </com.google.android.material.textfield.TextInputLayout>
 
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/Age"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Age"
-                            android:textAlignment="center"
-                            android:textColor="@color/design_default_color_on_secondary">
-
-                        </com.google.android.material.textview.MaterialTextView>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
+                    </LinearLayout>
 
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -358,14 +357,14 @@
 
                             </com.google.android.material.textview.MaterialTextView>
 
-                        <Spinner
-                            android:id="@+id/spGender"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="clip_horizontal|right|center_horizontal"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="1"
-                            android:entries="@array/gender" />
+                            <Spinner
+                                android:id="@+id/spGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="clip_horizontal|right|center_horizontal"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:entries="@array/gender" />
 
                         </LinearLayout>
 
@@ -377,8 +376,8 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         app:endIconMode="clear_text"
@@ -398,13 +397,14 @@
                         </com.google.android.material.textfield.TextInputEditText>
 
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout10"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
@@ -417,8 +417,8 @@
                             android:id="@+id/RRsp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="numberDecimal"
-                            android:hint="RRSP">
+                            android:hint="RRSP"
+                            android:inputType="numberDecimal">
 
                         </com.google.android.material.textfield.TextInputEditText>
 
@@ -428,12 +428,12 @@
                     <Button
 
                         android:id="@+id/btnSubmit"
+                        style="?attr/materialButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="SUBMIT"
-                        style="?attr/materialButtonStyle"/>
+                        android:text="SUBMIT" />
 
                     <Button
                         android:id="@+id/btnClear"
@@ -444,26 +444,16 @@
                         android:text="Clear" />
 
 
-
-
-
-
-
-
-
                     <!--                    <Spinner-->
-<!--                        android:id="@+id/spEmpStatus"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginRight="5dp"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:entries="@array/employment" />-->
+                    <!--                        android:id="@+id/spEmpStatus"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginRight="5dp"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:entries="@array/employment" />-->
 
 
                 </LinearLayout>
-
-
-
 
 
             </ScrollView>
