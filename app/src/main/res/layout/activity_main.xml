@@ -384,8 +384,10 @@
                             android:id="@+id/Grossincome"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="numberDecimal"
-                            android:hint="Gross Income">
+                            android:drawableLeft="@mipmap/ic_dollar"
+                            android:drawablePadding="5dp"
+                            android:hint="Gross Income"
+                            android:inputType="numberDecimal">
 
                         </com.google.android.material.textfield.TextInputEditText>
 
