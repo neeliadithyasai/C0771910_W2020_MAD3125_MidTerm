@@ -24,7 +24,7 @@
         android:text="Tax Calculation"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="24sp"
+        android:textSize="32dp"
         android:textStyle="bold" />
 
     <TextView
@@ -34,5 +34,15 @@
         android:layout_marginTop="20dp"
         android:text="Adithya sai Neeli"
         android:textAlignment="center"
+        android:textSize="18dp"
+        android:textColor="@color/design_default_color_on_secondary" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="C0771910"
+        android:textAlignment="center"
+        android:textSize="15dp"
         android:textColor="@color/design_default_color_on_secondary" />
 </LinearLayout>
