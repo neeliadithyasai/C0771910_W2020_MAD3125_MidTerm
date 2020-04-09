@@ -15,6 +15,8 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView rrsp;
     private TextView ttincome;
     private TextView provincial;
+    private TextView federal;
+    private TextView totalTaxPaid;
 
 
     @Override
@@ -28,6 +30,8 @@ public class detailsDisplay extends AppCompatActivity {
        cfrrsp =findViewById(R.id.cfrrsppp);
        ttincome = findViewById(R.id.ttip);
        provincial = findViewById(R.id.provincialTax);
+       federal = findViewById(R.id.federalTax);
+       totalTaxPaid = findViewById(R.id.ttpp);
 
 
         Intent intent = getIntent();
@@ -59,7 +63,7 @@ public class detailsDisplay extends AppCompatActivity {
 
        ttincome.setText(TotalTaxableIncome.toString());
 
-       if(TotalTaxableIncome > 220000){
+       if(TotalTaxableIncome >= 220000){
            Double pt = TotalTaxableIncome*0.1316;
            provincial.setText(pt.toString());
 
@@ -81,8 +85,25 @@ public class detailsDisplay extends AppCompatActivity {
        }
 
 
-
-      //  sno.setText(C2.getCurrentDate()+"\n"+C2.getSinNo()+"\n"+C2.getFirstName()+"\n"+C2.getLastName()+"\n"+C2.getBirthdate()+"\n"+C2.getAge()+"\n"+C2.getGender()+"\n"+C2.getGrossIncome()+"\n"+C2.getRRSP());
+        if(TotalTaxableIncome >= 210371.01){
+            Double pt = TotalTaxableIncome*0.33;
+            federal.setText(pt.toString());
+        }else if ((TotalTaxableIncome >= 147667.01) &&(TotalTaxableIncome <= 210371)){
+            Double pt = TotalTaxableIncome*0.29;
+            federal.setText(pt.toString());
+        }else if ((TotalTaxableIncome >= 95259.01) &&(TotalTaxableIncome <= 147667)){
+            Double pt = TotalTaxableIncome*0.26;
+            federal.setText(pt.toString());
+        }else if ((TotalTaxableIncome >= 47630.01) &&(TotalTaxableIncome <= 95259)){
+            Double pt = TotalTaxableIncome*0.2050;
+            federal.setText(pt.toString());
+        }else if ((TotalTaxableIncome >= 12609.01) &&(TotalTaxableIncome <= 47630)){
+            Double pt = TotalTaxableIncome*0.15;
+            federal.setText(pt.toString());
+        }else if (TotalTaxableIncome <= 12069){
+            Double pt = TotalTaxableIncome;
+            federal.setText(pt.toString());
+        }
 
 
 
