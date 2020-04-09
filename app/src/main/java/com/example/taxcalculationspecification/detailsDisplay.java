@@ -24,7 +24,6 @@ public class detailsDisplay extends AppCompatActivity {
 
         CRACustomer C2 = (CRACustomer) extras.getParcelable("object");
 
-        sno.setText(C2.getSinNo());
 
 
 

@@ -27,6 +27,7 @@
 
     public class informationEntryScreen extends AppCompatActivity {
 
+        private String[] genderArray;
         private TextView currentDate;
         private TextView sinNO;
         private TextView firstname;
@@ -48,6 +49,7 @@
             setContentView(R.layout.activity_main);
 
 
+            genderArray = getResources().getStringArray(R.array.gender);
             currentDate = findViewById(R.id.CurrentDate);
             sinNO = findViewById(R.id.Sin);
             firstname = findViewById(R.id.first_name);
@@ -57,7 +59,6 @@
             gender = findViewById(R.id.spGender);
             grossIncome = findViewById(R.id.Grossincome);
             rrsp = findViewById(R.id.RRsp);
-
             submit = findViewById(R.id.btnSubmit);
 
 
@@ -132,18 +133,24 @@
             submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String strSin = sinNO.getText().toString();
 
-                    if((isValidSin(strSin)) == false){
+                    String value1= grossIncome.getText().toString();
+                    Double grossValue=Double.parseDouble(value1);
+                    String value2= rrsp.getText().toString();
+                    Double rrspValue=Double.parseDouble(value2);
+
+
+
+                    if((isValidSin(sinNO.getText().toString())) == false){
                         sinNO.setError("not valid");
 
                     }else
                     {
-                        sinNO.setText(strSin);
+                        sinNO.setText(sinNO.getText().toString());
 
 
                         Intent mIntent = new Intent(informationEntryScreen.this, detailsDisplay.class);
-                        CRACustomer C1 = new CRACustomer("9999999999","Adithya", "Neeli", "12/9/95", "25", "male", 500.0, 34.0);
+                        CRACustomer C1 = new CRACustomer(sinNO.getText().toString(),firstname.getText().toString(), lastName.getText().toString(), DateTxt.getText().toString(), Age.getText().toString(), gender.getSelectedItem().toString(), grossValue, rrspValue);
                         mIntent.putExtra("object",C1);
                         startActivity(mIntent);
 
@@ -168,9 +175,6 @@
         }
         private boolean isValidSin(String sin) {
             String sinValidation = "\\d{9}";
-    //
-    //        \(\d{3}\)-\d{3}-
-
             Pattern pattern = Pattern.compile(sinValidation);
             Matcher matcher = pattern.matcher(sin);
             return matcher.matches();
