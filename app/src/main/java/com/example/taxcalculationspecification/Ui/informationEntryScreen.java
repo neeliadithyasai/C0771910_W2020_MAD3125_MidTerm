@@ -16,6 +16,7 @@
     import com.example.taxcalculationspecification.CRACustomer;
     import com.example.taxcalculationspecification.R;
     import com.example.taxcalculationspecification.detailsDisplay;
+    import com.google.android.material.snackbar.Snackbar;
 
     import java.text.SimpleDateFormat;
     import java.util.ArrayList;
@@ -151,6 +152,12 @@
 
                     }else if (Age.getText().toString().matches("")) {
                         Age.setError("enter Date of birth");
+
+                    } else if (gender.getSelectedItem().toString().matches("Choose One Type")){
+
+                        Snackbar.make(findViewById(R.id.spGender), R.string.cg,
+                                Snackbar.LENGTH_SHORT)
+                                .show();
 
                     } else if (grossIncome.getText().toString().matches("")) {
 

@@ -6,4 +6,5 @@
         <item>FEMALE</item>
         <item>OTHER</item>
     </string-array>
+    <string name="cg">choose gender</string>
 </resources>
