@@ -13,6 +13,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView eI;
     private TextView cfrrsp;
     private TextView rrsp;
+    private TextView ttincome;
 
 
     @Override
@@ -24,6 +25,7 @@ public class detailsDisplay extends AppCompatActivity {
        eI = findViewById(R.id.eIp);
        rrsp = findViewById(R.id.rrspcon);
        cfrrsp =findViewById(R.id.cfrrsppp);
+       ttincome = findViewById(R.id.ttip);
 
 
         Intent intent = getIntent();
@@ -33,6 +35,7 @@ public class detailsDisplay extends AppCompatActivity {
 
         Double gross = C2.getGrossIncome();
         Double contributedRrsp = C2.getRRSP();
+        Double TotalTaxableIncome = (gross-(calcualtecpp(gross)+calculateEi(gross)+calculateMaxRrsp(gross)));
 
        cpp.setText(calcualtecpp(gross).toString());
        eI.setText(calculateEi(gross).toString());
@@ -51,6 +54,8 @@ public class detailsDisplay extends AppCompatActivity {
            rrsp.setText(contributedRrsp.toString());
 
        }
+
+       ttincome.setText(TotalTaxableIncome.toString());
 
 
 
