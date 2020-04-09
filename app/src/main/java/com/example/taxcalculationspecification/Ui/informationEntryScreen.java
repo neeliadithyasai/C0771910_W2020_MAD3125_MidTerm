@@ -99,6 +99,7 @@
                         Age.setTextColor(Color.BLACK);
                         Age.setTypeface(null,Typeface.NORMAL);
                         submit.setEnabled(true);
+                        Age.setError(null);
 
 
                     }else {
@@ -148,7 +149,10 @@
                     }else if (lastName.getText().toString().matches("")){
                         lastName.setError("enter Last name!");
 
-                    }else if (grossIncome.getText().toString().matches("")) {
+                    }else if (Age.getText().toString().matches("")) {
+                        Age.setError("enter Date of birth");
+
+                    } else if (grossIncome.getText().toString().matches("")) {
 
                         grossIncome.setError("enter gross income!");
 
