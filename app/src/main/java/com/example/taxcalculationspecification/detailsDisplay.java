@@ -21,6 +21,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView fullName;
     private TextView BirthDate;
     private TextView Age;
+    private TextView TaxFilingDate;
 
 
     @Override
@@ -40,6 +41,7 @@ public class detailsDisplay extends AppCompatActivity {
        fullName = findViewById(R.id.fullName);
        BirthDate = findViewById(R.id.birthOfDate);
        Age = findViewById(R.id.ageofp);
+       TaxFilingDate = findViewById(R.id.taxfilingDate);
 
 
 
@@ -127,6 +129,7 @@ public class detailsDisplay extends AppCompatActivity {
         fullName.setText(C2.getLastName().toUpperCase()+" "+C2.getFirstName());
         BirthDate.setText(C2.getBirthdate());
         Age.setText(C2.getAge());
+        TaxFilingDate.setText(C2.getCurrentDate());
 
 
 
