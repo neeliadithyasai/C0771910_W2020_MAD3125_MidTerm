@@ -148,14 +148,14 @@
                     }else if (lastName.getText().toString().matches("")){
                         lastName.setError("enter Last name!");
 
-                    }else if ( Double.parseDouble(grossIncome.getText().toString()) <= 0){
-                        grossIncome.setError("gross income cannot be Zero");
-
-                    } else if (grossIncome.getText().toString().matches("")) {
+                    }else if (grossIncome.getText().toString().matches("")) {
 
                         grossIncome.setError("enter gross income!");
 
-                    } else if (rrsp.getText().toString().matches("")) {
+                    }else if ( Double.parseDouble(grossIncome.getText().toString()) <= 0){
+                        grossIncome.setError("gross income cannot be Zero");
+
+                    }  else if (rrsp.getText().toString().matches("")) {
                         rrsp.setError("enter Last name!");
 
                     } else {
