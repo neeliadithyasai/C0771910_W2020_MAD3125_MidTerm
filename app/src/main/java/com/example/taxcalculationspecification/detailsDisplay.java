@@ -14,6 +14,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView cfrrsp;
     private TextView rrsp;
     private TextView ttincome;
+    private TextView provincial;
 
 
     @Override
@@ -26,6 +27,7 @@ public class detailsDisplay extends AppCompatActivity {
        rrsp = findViewById(R.id.rrspcon);
        cfrrsp =findViewById(R.id.cfrrsppp);
        ttincome = findViewById(R.id.ttip);
+       provincial = findViewById(R.id.provincialTax);
 
 
         Intent intent = getIntent();
@@ -56,6 +58,27 @@ public class detailsDisplay extends AppCompatActivity {
        }
 
        ttincome.setText(TotalTaxableIncome.toString());
+
+       if(TotalTaxableIncome > 220000){
+           Double pt = TotalTaxableIncome*0.1316;
+           provincial.setText(pt.toString());
+
+       }else if ((TotalTaxableIncome >= 150000) &&(TotalTaxableIncome <= 220000)){
+           Double pt = TotalTaxableIncome*0.1216;
+           provincial.setText(pt.toString());
+       }else if ((TotalTaxableIncome >= 87813.01) &&(TotalTaxableIncome <= 150000)){
+           Double pt = TotalTaxableIncome*0.1116;
+           provincial.setText(pt.toString());
+       }else if ((TotalTaxableIncome >= 43906.01) &&(TotalTaxableIncome <= 87813)){
+           Double pt = TotalTaxableIncome*0.0915;
+           provincial.setText(pt.toString());
+       }else if ((TotalTaxableIncome >= 10582.01) &&(TotalTaxableIncome <= 43906)){
+           Double pt = TotalTaxableIncome*0.0505;
+           provincial.setText(pt.toString());
+       }else if (TotalTaxableIncome <= 10582){
+           Double pt = TotalTaxableIncome;
+           provincial.setText(pt.toString());
+       }
 
 
 
