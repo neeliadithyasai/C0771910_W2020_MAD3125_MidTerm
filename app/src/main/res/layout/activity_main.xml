@@ -143,6 +143,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:drawableLeft="@mipmap/ic_sinnumber"
                             android:hint="Sin Number"
                             android:inputType="numberDecimal"
                             android:textAlignment="center">
@@ -341,21 +342,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
-
-
-                            <com.google.android.material.textview.MaterialTextView
-                                android:id="@+id/Gender"
-                                android:layout_width="91dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="left"
-                                android:layout_marginLeft="5dp"
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:hint="GENDER"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/design_default_color_on_secondary"
-                                android:textSize="18sp">
+                                android:src="@mipmap/ic_gender" />
 
-                            </com.google.android.material.textview.MaterialTextView>
 
                             <Spinner
                                 android:id="@+id/spGender"
@@ -367,6 +360,8 @@
                                 android:entries="@array/gender" />
 
                         </LinearLayout>
+
+
 
 
                     </com.google.android.material.textfield.TextInputLayout>
