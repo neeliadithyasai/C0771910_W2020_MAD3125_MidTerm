@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class detailsDisplay extends AppCompatActivity {
 
     private TextView cpp;
@@ -49,7 +51,6 @@ public class detailsDisplay extends AppCompatActivity {
 
 
 
-
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
@@ -59,7 +60,9 @@ public class detailsDisplay extends AppCompatActivity {
         Double contributedRrsp = C2.getRRSP();
         Double TotalTaxableIncome = (gross-(calcualtecpp(gross)+calculateEi(gross)+calculateMaxRrsp(gross)));
 
-       cpp.setText(calcualtecpp(gross).toString());
+        
+
+       cpp.setText(String.format("%.2f", calcualtecpp(gross)));
        eI.setText(calculateEi(gross).toString());
 
        if(calculateMaxRrsp(gross) > contributedRrsp)
