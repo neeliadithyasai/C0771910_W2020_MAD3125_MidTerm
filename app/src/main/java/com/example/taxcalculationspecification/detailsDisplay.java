@@ -3,6 +3,7 @@ package com.example.taxcalculationspecification;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -10,6 +11,7 @@ public class detailsDisplay extends AppCompatActivity {
 
     private TextView cpp;
     private TextView eI;
+    private TextView cfrrsp;
 
 
     @Override
@@ -19,6 +21,7 @@ public class detailsDisplay extends AppCompatActivity {
 
        cpp = findViewById(R.id.cppp);
        eI = findViewById(R.id.eIp);
+       cfrrsp =findViewById(R.id.cfrrsppp);
 
 
         Intent intent = getIntent();
@@ -27,9 +30,22 @@ public class detailsDisplay extends AppCompatActivity {
         CRACustomer C2 = (CRACustomer) extras.getParcelable("object");
 
         Double gross = C2.getGrossIncome();
+        Double contributedRrsp = C2.getRRSP();
 
        cpp.setText(calcualtecpp(gross).toString());
        eI.setText(calculateEi(gross).toString());
+
+       if(calculateMaxRrsp(gross) > contributedRrsp)
+       {
+          Double x = calculateMaxRrsp(gross) - contributedRrsp;
+          cfrrsp.setText(x.toString());
+       }else if(calculateMaxRrsp(gross) < contributedRrsp)
+       {
+           Double x = calculateMaxRrsp(gross) - contributedRrsp;
+           cfrrsp.setText(x.toString());
+           cfrrsp.setTextColor(Color.RED);
+
+       }
 
 
 
@@ -74,6 +90,16 @@ public class detailsDisplay extends AppCompatActivity {
         }
 
         return x;
+    }
+
+    private Double calculateMaxRrsp(Double gross){
+        Double x;
+
+        x = gross * 0.18;
+
+        return x;
+
+
     }
 
 
