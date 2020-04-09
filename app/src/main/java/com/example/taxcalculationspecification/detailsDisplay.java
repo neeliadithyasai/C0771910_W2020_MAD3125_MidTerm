@@ -84,44 +84,44 @@ public class detailsDisplay extends AppCompatActivity {
 
        if(TotalTaxableIncome >= 220000){
            Double pt = TotalTaxableIncome*0.1316;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
 
        }else if ((TotalTaxableIncome >= 150000) &&(TotalTaxableIncome <= 220000)){
            Double pt = TotalTaxableIncome*0.1216;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
        }else if ((TotalTaxableIncome >= 87813.01) &&(TotalTaxableIncome <= 150000)){
            Double pt = TotalTaxableIncome*0.1116;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
        }else if ((TotalTaxableIncome >= 43906.01) &&(TotalTaxableIncome <= 87813)){
            Double pt = TotalTaxableIncome*0.0915;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
        }else if ((TotalTaxableIncome >= 10582.01) &&(TotalTaxableIncome <= 43906)){
            Double pt = TotalTaxableIncome*0.0505;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
        }else if (TotalTaxableIncome <= 10582){
            Double pt = TotalTaxableIncome;
-           provincial.setText(pt.toString());
+           provincial.setText(String.format("%.2f",pt));
        }
 
 
         if(TotalTaxableIncome >= 210371.01){
-            Double pt = TotalTaxableIncome*0.33;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome*0.33;
+            federal.setText(String.format("%.2f",ft));
         }else if ((TotalTaxableIncome >= 147667.01) &&(TotalTaxableIncome <= 210371)){
-            Double pt = TotalTaxableIncome*0.29;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome*0.29;
+            federal.setText(String.format("%.2f",ft));
         }else if ((TotalTaxableIncome >= 95259.01) &&(TotalTaxableIncome <= 147667)){
-            Double pt = TotalTaxableIncome*0.26;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome*0.26;
+            federal.setText(String.format("%.2f",ft));
         }else if ((TotalTaxableIncome >= 47630.01) &&(TotalTaxableIncome <= 95259)){
-            Double pt = TotalTaxableIncome*0.2050;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome*0.2050;
+            federal.setText(String.format("%.2f",ft));
         }else if ((TotalTaxableIncome >= 12609.01) &&(TotalTaxableIncome <= 47630)){
-            Double pt = TotalTaxableIncome*0.15;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome*0.15;
+            federal.setText(String.format("%.2f",ft));
         }else if (TotalTaxableIncome <= 12069){
-            Double pt = TotalTaxableIncome;
-            federal.setText(pt.toString());
+            Double ft = TotalTaxableIncome;
+            federal.setText(String.format("%.2f",ft));
         }
 
         String value1= provincial.getText().toString();
