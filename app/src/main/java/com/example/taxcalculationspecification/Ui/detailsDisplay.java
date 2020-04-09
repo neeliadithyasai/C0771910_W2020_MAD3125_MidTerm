@@ -67,27 +67,27 @@
 
 
 
-           cpp.setText(String.format("%.2f", calcualtecpp(gross)));
-           eI.setText(String.format("%.2f",calculateEi(gross)));
+           cpp.setText(String.format("$%.2f", calcualtecpp(gross)));
+           eI.setText(String.format("$%.2f",calculateEi(gross)));
 
            // code for calculating rrsp and carry forward rrsp
 
            if(calculateMaxRrsp(gross) > contributedRrsp)
            {
               Double x = calculateMaxRrsp(gross) - contributedRrsp;
-              cfrrsp.setText(String.format("%.2f",x));
-              rrsp.setText(String.format("%.2f",contributedRrsp));
+              cfrrsp.setText(String.format("$%.2f",x));
+              rrsp.setText(String.format("$%.2f",contributedRrsp));
 
            }else if(calculateMaxRrsp(gross) < contributedRrsp)
            {
                Double x = calculateMaxRrsp(gross) - contributedRrsp;
-               cfrrsp.setText(String.format("%.2f",x));
+               cfrrsp.setText(String.format("$%.2f",x));
                cfrrsp.setTextColor(Color.RED);
-               rrsp.setText(String.format("%.2f",contributedRrsp));
+               rrsp.setText(String.format("$%.2f",contributedRrsp));
 
            }
 
-           ttincome.setText(String.format("%.2f",TotalTaxableIncome));
+           ttincome.setText(String.format("$%.2f",TotalTaxableIncome));
 
            //code for calculating provincial tax.
 
@@ -145,7 +145,9 @@
             Double Finalfederal=Double.parseDouble(value2);
 
             Double x = Finalprovincial + Finalfederal;
-            totalTaxPaid.setText(x.toString());
+            totalTaxPaid.setText("$"+x.toString());
+            provincial.setText("$"+value1);
+            federal.setText("$"+value2);
 
 
 
@@ -155,7 +157,7 @@
             gender.setText(C2.getGender());
             Age.setText(C2.getAge());
             TaxFilingDate.setText(C2.getCurrentDate());
-            grossIncome.setText(C2.getGrossIncome().toString());
+            grossIncome.setText("$"+C2.getGrossIncome().toString());
 
 
 

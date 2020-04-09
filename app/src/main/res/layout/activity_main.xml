@@ -209,32 +209,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textInputLayout13"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="281dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            tools:layout_editor_absoluteX="104dp"
-                            tools:layout_editor_absoluteY="80dp">
+                            android:layout_marginTop="30dp"
+                            app:srcCompat="@mipmap/ic_age" />
 
-
-                            <com.google.android.material.textview.MaterialTextView
-                                android:id="@+id/bdate"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Date Of Birth:"
-                                android:textAlignment="center"
-                                android:textColor="@color/design_default_color_on_secondary">
-
-                            </com.google.android.material.textview.MaterialTextView>
-
-
-                        </com.google.android.material.textfield.TextInputLayout>
 
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -255,6 +237,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:gravity="top"
                                 android:hint="Click to Enter Birth Date"
                                 android:textAlignment="center"
                                 android:textColor="@color/design_default_color_on_secondary">
@@ -274,7 +257,8 @@
                             android:layout_width="281dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            app:srcCompat="@mipmap/ic_age" />
+                            android:layout_marginTop="30dp"
+                            app:srcCompat="@mipmap/ic_agen" />
 
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -286,7 +270,6 @@
                             android:layout_marginTop="0dp"
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:gravity="center"
                             tools:layout_editor_absoluteX="104dp"
                             tools:layout_editor_absoluteY="80dp">
 
@@ -296,7 +279,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:gravity="center|top"
+                                android:gravity="center"
                                 android:hint="Age"
                                 android:textAlignment="center"
                                 android:textColor="@color/design_default_color_on_secondary">
