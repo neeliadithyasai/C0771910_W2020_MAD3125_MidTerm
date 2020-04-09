@@ -49,7 +49,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:text="TextView"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -72,10 +73,11 @@
                         android:id="@+id/fullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:text="TextView" />
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
 
                 <TableRow
@@ -99,10 +101,11 @@
                         android:id="@+id/birthOfDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:text="TextView" />
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
 
                 <TableRow
@@ -126,10 +129,11 @@
                         android:id="@+id/genderp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:text="TextView" />
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -152,10 +156,11 @@
                         android:id="@+id/ageofp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:text="TextView" />
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -178,10 +183,11 @@
                         android:id="@+id/taxfilingDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:text="TextView" />
+                        android:textColor="@color/design_default_color_on_secondary" />
                 </TableRow>
 
                 <TableRow
