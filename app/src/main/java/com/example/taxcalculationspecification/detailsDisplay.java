@@ -24,6 +24,7 @@ public class detailsDisplay extends AppCompatActivity {
 
         CRACustomer C2 = (CRACustomer) extras.getParcelable("object");
 
+        sno.setText(C2.getSinNo()+"\n"+C2.getFirstName()+"\n"+C2.getLastName()+"\n"+C2.getBirthdate()+"\n"+C2.getAge()+"\n"+C2.getGender()+"\n"+C2.getGrossIncome()+"\n"+C2.getRRSP());
 
 
 
