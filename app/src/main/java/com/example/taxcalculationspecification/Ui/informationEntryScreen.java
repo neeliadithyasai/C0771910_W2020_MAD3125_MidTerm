@@ -47,10 +47,17 @@
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            DateTxt = findViewById(R.id.BirthDate);
-            Age = findViewById(R.id.Age);
+
             currentDate = findViewById(R.id.CurrentDate);
             sinNO = findViewById(R.id.Sin);
+            firstname = findViewById(R.id.first_name);
+            lastName = findViewById(R.id.last_name);
+            DateTxt = findViewById(R.id.BirthDate);
+            Age = findViewById(R.id.Age);
+            gender = findViewById(R.id.spGender);
+            grossIncome = findViewById(R.id.Grossincome);
+            rrsp = findViewById(R.id.RRsp);
+
             submit = findViewById(R.id.btnSubmit);
 
 
