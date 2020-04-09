@@ -80,7 +80,7 @@ public class detailsDisplay extends AppCompatActivity {
 
        }
 
-       ttincome.setText(TotalTaxableIncome.toString());
+       ttincome.setText(String.format("%.2f",TotalTaxableIncome));
 
        if(TotalTaxableIncome >= 220000){
            Double pt = TotalTaxableIncome*0.1316;
