@@ -150,7 +150,7 @@
 
 
                         Intent mIntent = new Intent(informationEntryScreen.this, detailsDisplay.class);
-                        CRACustomer C1 = new CRACustomer(sinNO.getText().toString(),firstname.getText().toString(), lastName.getText().toString(), DateTxt.getText().toString(), Age.getText().toString(), gender.getSelectedItem().toString(), grossValue, rrspValue);
+                        CRACustomer C1 = new CRACustomer(currentDate.getText().toString(),sinNO.getText().toString(),firstname.getText().toString(), lastName.getText().toString(), DateTxt.getText().toString(), Age.getText().toString(), gender.getSelectedItem().toString(), grossValue, rrspValue);
                         mIntent.putExtra("object",C1);
                         startActivity(mIntent);
 

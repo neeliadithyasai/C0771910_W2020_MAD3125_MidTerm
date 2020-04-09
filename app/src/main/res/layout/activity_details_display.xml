@@ -7,9 +7,9 @@
     tools:context=".detailsDisplay">
 
     <TextView
-        android:id="@+id/txtsno"
-        android:layout_width="339dp"
-        android:layout_height="463dp"
+        android:id="@+id/sinNumber"
+        android:layout_width="295dp"
+        android:layout_height="495dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

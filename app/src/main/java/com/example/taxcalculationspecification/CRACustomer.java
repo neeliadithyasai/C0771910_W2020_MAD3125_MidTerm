@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 public class CRACustomer implements Parcelable  {
 
+    private String currentDate;
     private String sinNo;
     private String firstName;
     private String lastName;
@@ -16,6 +17,7 @@ public class CRACustomer implements Parcelable  {
     private Double RRSP;
 
     protected CRACustomer(Parcel in) {
+        currentDate = in.readString();
         sinNo = in.readString();
         firstName = in.readString();
         lastName = in.readString();
@@ -34,22 +36,11 @@ public class CRACustomer implements Parcelable  {
         }
     }
 
-    public static final Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
-        @Override
-        public CRACustomer createFromParcel(Parcel in) {
-            return new CRACustomer(in);
-        }
-
-        @Override
-        public CRACustomer[] newArray(int size) {
-            return new CRACustomer[size];
-        }
-    };
-
     public CRACustomer() {
     }
 
-    public CRACustomer(String sinNo, String firstName, String lastName, String birthdate, String age, String gender, Double grossIncome, Double RRSP) {
+    public CRACustomer(String currentDate, String sinNo, String firstName, String lastName, String birthdate, String age, String gender, Double grossIncome, Double RRSP) {
+        this.currentDate = currentDate;
         this.sinNo = sinNo;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -61,12 +52,8 @@ public class CRACustomer implements Parcelable  {
     }
 
     @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(currentDate);
         dest.writeString(sinNo);
         dest.writeString(firstName);
         dest.writeString(lastName);
@@ -85,6 +72,31 @@ public class CRACustomer implements Parcelable  {
             dest.writeByte((byte) 1);
             dest.writeDouble(RRSP);
         }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
+        @Override
+        public CRACustomer createFromParcel(Parcel in) {
+            return new CRACustomer(in);
+        }
+
+        @Override
+        public CRACustomer[] newArray(int size) {
+            return new CRACustomer[size];
+        }
+    };
+
+    public String getCurrentDate() {
+        return currentDate;
+    }
+
+    public void setCurrentDate(String currentDate) {
+        this.currentDate = currentDate;
     }
 
     public String getSinNo() {
