@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
-        <activity android:name=".detailsDisplay"></activity>
+        <activity android:name=".Ui.detailsDisplay"></activity>
         <activity android:name=".Ui.informationEntryScreen" />
         <activity
             android:name=".Ui.splashScreenActivity"

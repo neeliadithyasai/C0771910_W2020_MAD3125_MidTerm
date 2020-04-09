@@ -15,11 +15,9 @@
 
     import com.example.taxcalculationspecification.CRACustomer;
     import com.example.taxcalculationspecification.R;
-    import com.example.taxcalculationspecification.detailsDisplay;
     import com.google.android.material.snackbar.Snackbar;
 
     import java.text.SimpleDateFormat;
-    import java.util.ArrayList;
     import java.util.Calendar;
     import java.util.Locale;
     import java.util.regex.Matcher;
