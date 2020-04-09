@@ -20,6 +20,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView sinNumber;
     private TextView fullName;
     private TextView BirthDate;
+    private TextView Age;
 
 
     @Override
@@ -38,6 +39,8 @@ public class detailsDisplay extends AppCompatActivity {
        sinNumber = findViewById(R.id.sinNo);
        fullName = findViewById(R.id.fullName);
        BirthDate = findViewById(R.id.birthOfDate);
+       Age = findViewById(R.id.ageofp);
+
 
 
 
@@ -123,6 +126,8 @@ public class detailsDisplay extends AppCompatActivity {
         sinNumber.setText(C2.getSinNo());
         fullName.setText(C2.getLastName().toUpperCase()+" "+C2.getFirstName());
         BirthDate.setText(C2.getBirthdate());
+        Age.setText(C2.getAge());
+
 
 
 
