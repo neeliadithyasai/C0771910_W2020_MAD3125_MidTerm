@@ -17,6 +17,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView provincial;
     private TextView federal;
     private TextView totalTaxPaid;
+    private TextView sinNumber;
 
 
     @Override
@@ -32,6 +33,7 @@ public class detailsDisplay extends AppCompatActivity {
        provincial = findViewById(R.id.provincialTax);
        federal = findViewById(R.id.federalTax);
        totalTaxPaid = findViewById(R.id.ttpp);
+       sinNumber = findViewById(R.id.sinNo);
 
 
         Intent intent = getIntent();
@@ -105,6 +107,15 @@ public class detailsDisplay extends AppCompatActivity {
             federal.setText(pt.toString());
         }
 
+        String value1= provincial.getText().toString();
+        Double Finalprovincial=Double.parseDouble(value1);
+        String value2= federal.getText().toString();
+        Double Finalfederal=Double.parseDouble(value2);
+
+        Double x = Finalprovincial + Finalfederal;
+        totalTaxPaid.setText(x.toString());
+
+        sinNumber.setText(C2.getSinNo());
 
 
 
