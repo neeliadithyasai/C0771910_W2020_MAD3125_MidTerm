@@ -12,6 +12,7 @@ public class detailsDisplay extends AppCompatActivity {
     private TextView cpp;
     private TextView eI;
     private TextView cfrrsp;
+    private TextView rrsp;
 
 
     @Override
@@ -21,6 +22,7 @@ public class detailsDisplay extends AppCompatActivity {
 
        cpp = findViewById(R.id.cppp);
        eI = findViewById(R.id.eIp);
+       rrsp = findViewById(R.id.rrspcon);
        cfrrsp =findViewById(R.id.cfrrsppp);
 
 
@@ -39,11 +41,14 @@ public class detailsDisplay extends AppCompatActivity {
        {
           Double x = calculateMaxRrsp(gross) - contributedRrsp;
           cfrrsp.setText(x.toString());
+          rrsp.setText(contributedRrsp.toString());
+
        }else if(calculateMaxRrsp(gross) < contributedRrsp)
        {
            Double x = calculateMaxRrsp(gross) - contributedRrsp;
            cfrrsp.setText(x.toString());
            cfrrsp.setTextColor(Color.RED);
+           rrsp.setText(contributedRrsp.toString());
 
        }
 
