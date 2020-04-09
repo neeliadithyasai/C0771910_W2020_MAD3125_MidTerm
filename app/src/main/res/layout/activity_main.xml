@@ -131,6 +131,8 @@
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
                             app:endIconMode="clear_text"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="9"
                             tools:layout_editor_absoluteX="104dp"
                             tools:layout_editor_absoluteY="80dp">
 
