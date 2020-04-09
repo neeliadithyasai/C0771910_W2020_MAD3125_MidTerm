@@ -13,6 +13,9 @@
         android:layout_width="411dp"
         android:layout_height="338dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@color/cardview_light_background"
         app:srcCompat="@drawable/tax2" />
 
